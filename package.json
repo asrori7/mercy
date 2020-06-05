@@ -1,0 +1,41 @@
+{
+  "name": "mercy",
+  "version": "1.1.1",
+  "private": true,
+  "description": "This is mercy",
+  "main": "dist/mercy-button.umd.js",
+  "module": "dist/mercy-button.esm.js",
+  "unpkg": "dist/mercy-button.min.js",
+  "browser": {
+    "./sfc": "src/mercy-button.vue"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/mercy-button.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/mercy-button.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/mercy-button.min.js"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "this",
+    "is",
+    "mercy"
+  ],
+  "author": {
+    "name": "Rori",
+    "email": "rorijoe@gmail.com",
+    "url": "https://neko-chan.netlify.app/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "rollup": "^2.13.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
